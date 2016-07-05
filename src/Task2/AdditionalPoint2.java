@@ -14,7 +14,7 @@ public class AdditionalPoint2 {
 			for (int i=1;i<n+1;i++){
 				//необходим вещественный результат от деления, поэтому одно
 				//из чисел не целое (1.0)
-				sum=sum+1.0/i; 
+				sum+=1.0/i; 
 			}	
 		System.out.println(sum);//выводим сумму
 	}
