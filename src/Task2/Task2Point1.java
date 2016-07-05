@@ -1,3 +1,4 @@
+package Task2;
 
 public class Task2Point1 {
 	public static void main(String[] args) {

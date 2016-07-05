@@ -1,3 +1,4 @@
+package Task2;
 import java.util.Scanner; //импортируем класс Scanner
 public class Task2Point7 {
 
