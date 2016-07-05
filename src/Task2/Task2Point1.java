@@ -3,8 +3,8 @@ package Task2;
 public class Task2Point1 {
 	public static void main(String[] args) {
 	String str = "строка с любым текстом";	
-	String strPart1 =""; //первая часть строки
-	String strPart2="";  //вторая часть строки
+	String strPart1 = ""; //первая часть строки
+	String strPart2 = "";  //вторая часть строки
 	
 	//выводим количество символов в строке
 	System.out.println("Количество символов в строке: "+ str.length());
