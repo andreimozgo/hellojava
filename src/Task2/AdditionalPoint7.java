@@ -1,5 +1,11 @@
 package Task2;
 import java.util.Scanner;
+/**Класс представляет собой калькулятор, который в процессе работы
+ * запрашивает два числа и действие - сложение или вычитание.
+ * Выводит результат и продолжает работать, пока не будет введен символ q.
+ * @author Андрей
+ *
+ */
 public class AdditionalPoint7 {
 
 	public static void main(String[] args) {
