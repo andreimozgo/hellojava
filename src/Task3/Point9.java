@@ -26,7 +26,7 @@ public class Point9 {
 			}
 		}
 		for(int val:myArray){
-			System.out.print(val+" ");
+			System.out.print(val + " ");
 		}
 	}
 
