@@ -7,7 +7,7 @@ public class Point8 {
 		int proizv;
 
 		if (myArray[0]==0)
-			System.out.println("Ноль является первым элементом. Вычисление невозможно.");
+			System.out.println("РќРѕР»СЊ СЏРІР»СЏРµС‚СЃСЏ РїРµСЂРІС‹Рј СЌР»РµРјРµРЅС‚РѕРј. Р’С‹С‡РёСЃР»РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ.");
 		else{
 			proizv=myArray[0];
 			for(int i=1;i<myArray.length;i++){
@@ -16,7 +16,7 @@ public class Point8 {
 				else
 					break;
 			}
-			System.out.println("Произведение элементов массива до первого 0 = "+proizv);
+			System.out.println("РџСЂРѕРёР·РІРµРґРµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР° РґРѕ РїРµСЂРІРѕРіРѕ 0 = "+proizv);
 		}
 	}
 }

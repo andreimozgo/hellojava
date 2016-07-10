@@ -3,7 +3,7 @@ package task4;
 public class Point2 {
 
 	public static void main(String[] args) {
-		String str = "text example for exercisez"; //пример строки
+		String str = "text example for exercisez"; //РїСЂРёРјРµСЂ СЃС‚СЂРѕРєРё
 
 
 		for (int i=0;i<str.length();i++){
