@@ -7,7 +7,7 @@ public class Point6 {
 	public static void main(String[] args) {
 
 		String str1 = "дирижабль"; //пример строки1 
-		String str2 = "ьирибажлд"; //пример строки2  
+		String str2 = "ьирибажлд"; //пример строки2   
 		char buf;
 		StringBuffer strNew1 = new StringBuffer(str1);
 		StringBuffer strNew2 = new StringBuffer(str2);		
