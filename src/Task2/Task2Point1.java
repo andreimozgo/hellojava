@@ -2,16 +2,16 @@ package Task2;
 
 public class Task2Point1 {
 	public static void main(String[] args) {
-	String str = "строка с любым текстом";	
-	String strPart1 = ""; //первая часть строки
-	String strPart2 = "";  //вторая часть строки
-	
-	//выводим количество символов в строке
-	System.out.println("Количество символов в строке: "+ str.length());
-	//делим исходную строку на две
-	strPart1=str.substring(0,str.length()/2);
-	strPart2=str.substring(str.length()/2);
-	//выводим две новые строки
-	System.out.println("Первая часть строки: "+strPart1+ "\n" +"Вторая часть строки: "+strPart2);
+		String str = "СЃС‚СЂРѕРєР° СЃ Р»СЋР±С‹Рј С‚РµРєСЃС‚РѕРј";	
+		String strPart1 = ""; //РїРµСЂРІР°СЏ С‡Р°СЃС‚СЊ СЃС‚СЂРѕРєРё
+		String strPart2 = "";  //РІС‚РѕСЂР°СЏ С‡Р°СЃС‚СЊ СЃС‚СЂРѕРєРё
+
+		//РІС‹РІРѕРґРёРј РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ РІ СЃС‚СЂРѕРєРµ
+		System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ РІ СЃС‚СЂРѕРєРµ: "+ str.length());
+		//РґРµР»РёРј РёСЃС…РѕРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ РЅР° РґРІРµ
+		strPart1=str.substring(0,str.length()/2);
+		strPart2=str.substring(str.length()/2);
+		//РІС‹РІРѕРґРёРј РґРІРµ РЅРѕРІС‹Рµ СЃС‚СЂРѕРєРё
+		System.out.println("РџРµСЂРІР°СЏ С‡Р°СЃС‚СЊ СЃС‚СЂРѕРєРё: "+strPart1+ "\n" +"Р’С‚РѕСЂР°СЏ С‡Р°СЃС‚СЊ СЃС‚СЂРѕРєРё: "+strPart2);
 	}
 }

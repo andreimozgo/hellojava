@@ -1,34 +1,34 @@
 package Task2;
-import java.util.Scanner; //èìïîğòèğóåì êëàññ Scanner
+import java.util.Scanner; //Ğ¸Ğ¼Ğ¿Ğ¾Ñ€Ñ‚Ğ¸Ñ€ÑƒĞµĞ¼ ĞºĞ»Ğ°ÑÑ Scanner
 public class Task2Point7 {
 
 	public static void main(String[] args) {
-		//ñîçäàåì îáúåêò êëàññà Scanner äëÿ ââîäà äàííûõ
+		//ÑĞ¾Ğ·Ğ´Ğ°ĞµĞ¼ Ğ¾Ğ±ÑŠĞµĞºÑ‚ ĞºĞ»Ğ°ÑÑĞ° Scanner Ğ´Ğ»Ñ Ğ²Ğ²Ğ¾Ğ´Ğ° Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ…
 		Scanner input = new Scanner(System.in); 
 		int day=0;
-		
-		System.out.println("Ââåäèòå íîìåğ äíÿ íåäåëè: ");
-		day = input.nextInt(); //âîäèì íîìåğ äíÿ
-		//åñëè ÷èñëî áîëüøå 0 è ìåíüøå 8, òî âûâîäèì ñîîòâåòñòâóşùèé äåíü íåäåëè		
+
+		System.out.println("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ´Ğ½Ñ Ğ½ĞµĞ´ĞµĞ»Ğ¸: ");
+		day = input.nextInt(); //Ğ²Ğ¾Ğ´Ğ¸Ğ¼ Ğ½Ğ¾Ğ¼ĞµÑ€ Ğ´Ğ½Ñ
+		//ĞµÑĞ»Ğ¸ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0 Ğ¸ Ğ¼ĞµĞ½ÑŒÑˆĞµ 8, Ñ‚Ğ¾ Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ¸Ğ¼ ÑĞ¾Ğ¾Ñ‚Ğ²ĞµÑ‚ÑÑ‚Ğ²ÑƒÑÑ‰Ğ¸Ğ¹ Ğ´ĞµĞ½ÑŒ Ğ½ĞµĞ´ĞµĞ»Ğ¸		
 		if (day>0&&day<8){ 
 			switch (day) {
-				case 1: System.out.println("Ïîíåäåëüíèê");
-					break;
-				case 2: System.out.println("Âòîğíèê");
-					break;
-				case 3: System.out.println("Ñğåäà");
-					break;	
-				case 4: System.out.println("×åòâåğã");
-					break;
-				case 5: System.out.println("Ïÿòíèöà");
-					break;
-				case 6: System.out.println("Ñóááîòà");
-					break;
-				case 7: System.out.println("Âîñêğåñåíèå");
+			case 1: System.out.println("ĞŸĞ¾Ğ½ĞµĞ´ĞµĞ»ÑŒĞ½Ğ¸Ğº");
+			break;
+			case 2: System.out.println("Ğ’Ñ‚Ğ¾Ñ€Ğ½Ğ¸Ğº");
+			break;
+			case 3: System.out.println("Ğ¡Ñ€ĞµĞ´Ğ°");
+			break;	
+			case 4: System.out.println("Ğ§ĞµÑ‚Ğ²ĞµÑ€Ğ³");
+			break;
+			case 5: System.out.println("ĞŸÑÑ‚Ğ½Ğ¸Ñ†Ğ°");
+			break;
+			case 6: System.out.println("Ğ¡ÑƒĞ±Ğ±Ğ¾Ñ‚Ğ°");
+			break;
+			case 7: System.out.println("Ğ’Ğ¾ÑĞºÑ€ĞµÑĞµĞ½Ğ¸Ğµ");
 			}
 		}
-			//åñëè ÷èñëî íå â íóæíîì äèàïàçîíå âûâîäèì ñîîáùåíèå îá îøèáêå
-			else System.out.println("Âû ââåëè íåâåğíûé íîìåğ.");
+		//ĞµÑĞ»Ğ¸ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ½Ğµ Ğ² Ğ½ÑƒĞ¶Ğ½Ğ¾Ğ¼ Ğ´Ğ¸Ğ°Ğ¿Ğ°Ğ·Ğ¾Ğ½Ğµ Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ¸Ğ¼ ÑĞ¾Ğ¾Ğ±Ñ‰ĞµĞ½Ğ¸Ğµ Ğ¾Ğ± Ğ¾ÑˆĞ¸Ğ±ĞºĞµ
+		else System.out.println("Ğ’Ñ‹ Ğ²Ğ²ĞµĞ»Ğ¸ Ğ½ĞµĞ²ĞµÑ€Ğ½Ñ‹Ğ¹ Ğ½Ğ¾Ğ¼ĞµÑ€.");
 	}
 
 }

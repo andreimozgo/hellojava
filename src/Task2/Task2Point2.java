@@ -1,24 +1,24 @@
 package Task2;
-import java.util.Scanner; //импортируем класс Scanner
+import java.util.Scanner; //РёРјРїРѕСЂС‚РёСЂСѓРµРј РєР»Р°СЃСЃ Scanner
 
 public class Task2Point2 {
 
 	public static void main(String[] args) {
-		
-	int number1, number2; //две переменные, которые будем вводить с клавиатуры
-	Scanner input = new Scanner(System.in); //создаем объект класса сканер
-	
-	System.out.print("Введите первое число: ");
-	number1=input.nextInt(); //вводим первое число
-	System.out.print("Введите второе число: ");
-	number2=input.nextInt(); //вводим второе число
-	//сравниваем числа и выводим результат сравнения
-	if (number1>number2)
-		System.out.println("Первое число больше.");
-	if (number1<number2) 
-		System.out.println("Второе число больше.");
-	if (number1==number2)
-		System.out.println("Числа равны");		
+
+		int number1, number2; //РґРІРµ РїРµСЂРµРјРµРЅРЅС‹Рµ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґРµРј РІРІРѕРґРёС‚СЊ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
+		Scanner input = new Scanner(System.in); //СЃРѕР·РґР°РµРј РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° СЃРєР°РЅРµСЂ
+
+		System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
+		number1=input.nextInt(); //РІРІРѕРґРёРј РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ
+		System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
+		number2=input.nextInt(); //РІРІРѕРґРёРј РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ
+		//СЃСЂР°РІРЅРёРІР°РµРј С‡РёСЃР»Р° Рё РІС‹РІРѕРґРёРј СЂРµР·СѓР»СЊС‚Р°С‚ СЃСЂР°РІРЅРµРЅРёСЏ
+		if (number1>number2)
+			System.out.println("РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ.");
+		if (number1<number2) 
+			System.out.println("Р’С‚РѕСЂРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ.");
+		if (number1==number2)
+			System.out.println("Р§РёСЃР»Р° СЂР°РІРЅС‹");		
 	}
 
 }

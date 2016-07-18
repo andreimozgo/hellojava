@@ -3,10 +3,10 @@ package Task2;
 public class Task2Point3 {
 
 	public static void main(String[] args) {
-    double number1 = 10;
-    double number2 = 3.5;
-    //т.к. частное двух чисел - это результат деления первого на второе, его и выводим
-    System.out.println("Частное заданных чисел = " + number1/number2);
+		double number1 = 10;
+		double number2 = 3.5;
+		//С‚.Рє. С‡Р°СЃС‚РЅРѕРµ РґРІСѓС… С‡РёСЃРµР» - СЌС‚Рѕ СЂРµР·СѓР»СЊС‚Р°С‚ РґРµР»РµРЅРёСЏ РїРµСЂРІРѕРіРѕ РЅР° РІС‚РѕСЂРѕРµ, РµРіРѕ Рё РІС‹РІРѕРґРёРј
+		System.out.println("Р§Р°СЃС‚РЅРѕРµ Р·Р°РґР°РЅРЅС‹С… С‡РёСЃРµР» = " + number1/number2);
 	}
 
 }

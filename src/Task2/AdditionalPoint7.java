@@ -1,9 +1,9 @@
 package Task2;
 import java.util.Scanner;
-/**Класс представляет собой калькулятор, который в процессе работы
- * запрашивает два числа и действие - сложение или вычитание.
- * Выводит результат и продолжает работать, пока не будет введен символ q.
- * @author Андрей
+/**РљР»Р°СЃСЃ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃРѕР±РѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ, РєРѕС‚РѕСЂС‹Р№ РІ РїСЂРѕС†РµСЃСЃРµ СЂР°Р±РѕС‚С‹
+ * Р·Р°РїСЂР°С€РёРІР°РµС‚ РґРІР° С‡РёСЃР»Р° Рё РґРµР№СЃС‚РІРёРµ - СЃР»РѕР¶РµРЅРёРµ РёР»Рё РІС‹С‡РёС‚Р°РЅРёРµ.
+ * Р’С‹РІРѕРґРёС‚ СЂРµР·СѓР»СЊС‚Р°С‚ Рё РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ, РїРѕРєР° РЅРµ Р±СѓРґРµС‚ РІРІРµРґРµРЅ СЃРёРјРІРѕР» q.
+ * @author РђРЅРґСЂРµР№
  *
  */
 public class AdditionalPoint7 {
@@ -11,30 +11,30 @@ public class AdditionalPoint7 {
 	public static void main(String[] args) {
 
 		String str="";
-		double number1 = 1;//первое число
-		double number2 = 1;//второе число
-		double result; //результат операции
-		Scanner input1 = new Scanner(System.in);//объект класса Scanner для считывания первого числа
-		Scanner input2 = new Scanner(System.in);//объект класса Scanner для считывания второго числа
-		Scanner input3 = new Scanner(System.in);//объект класса Scanner для считывания операции
+		double number1 = 1;//РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ
+		double number2 = 1;//РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ
+		double result; //СЂРµР·СѓР»СЊС‚Р°С‚ РѕРїРµСЂР°С†РёРё
+		Scanner input1 = new Scanner(System.in);//РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Scanner РґР»СЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РїРµСЂРІРѕРіРѕ С‡РёСЃР»Р°
+		Scanner input2 = new Scanner(System.in);//РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Scanner РґР»СЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РІС‚РѕСЂРѕРіРѕ С‡РёСЃР»Р°
+		Scanner input3 = new Scanner(System.in);//РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Scanner РґР»СЏ СЃС‡РёС‚С‹РІР°РЅРёСЏ РѕРїРµСЂР°С†РёРё
 
 		while (!str.equals("q")){
-			System.out.print("Введите первое число:");
+			System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ:");
 			number1=input1.nextDouble();
-			System.out.print("Введите второе число:");
+			System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ:");
 			number2=input2.nextDouble();
-			System.out.print("Выберите операцию (+ или /):");
+			System.out.print("Р’С‹Р±РµСЂРёС‚Рµ РѕРїРµСЂР°С†РёСЋ (+ РёР»Рё /):");
 			str=input3.nextLine();
 
 			if (str.equals("+")){
 				result=number1+number2;
-				System.out.println("Результат операции:"+result);
+				System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ РѕРїРµСЂР°С†РёРё:"+result);
 			}
 			if (str.equals("/")){
 				result=number1/number2;
-				System.out.println("Результат операции:"+result);
+				System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ РѕРїРµСЂР°С†РёРё:"+result);
 			}
-			System.out.print("Введите q для выхода или ввод для продолжения.");
+			System.out.print("Р’РІРµРґРёС‚Рµ q РґР»СЏ РІС‹С…РѕРґР° РёР»Рё РІРІРѕРґ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ.");
 			str=input3.nextLine();
 		}
 		input1.close();

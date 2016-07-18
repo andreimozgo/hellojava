@@ -5,20 +5,20 @@ public class AdditionalPoint3 {
 	public static void main(String[] args) {
 
 		int number=0;
-		int factorial=1;//единица, т.к. факториал 0=1
-		Scanner input = new Scanner(System.in);//создаем объект класса Scanner для ввода с клавиатуры
+		int factorial=1;//РµРґРёРЅРёС†Р°, С‚.Рє. С„Р°РєС‚РѕСЂРёР°Р» 0=1
+		Scanner input = new Scanner(System.in);//СЃРѕР·РґР°РµРј РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Scanner РґР»СЏ РІРІРѕРґР° СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
 
-		System.out.println("Введите натуральное число:");
-		number=input.nextInt();//вводим число
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ:");
+		number=input.nextInt();//РІРІРѕРґРёРј С‡РёСЃР»Рѕ
 
 		for (int i=1;i<number+1;i++){
-			factorial*=i;//считаем факториал
+			factorial*=i;//СЃС‡РёС‚Р°РµРј С„Р°РєС‚РѕСЂРёР°Р»
 		}
-		//если было введено отрицательное число - сообщаем об ошибке
+		//РµСЃР»Рё Р±С‹Р»Рѕ РІРІРµРґРµРЅРѕ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ - СЃРѕРѕР±С‰Р°РµРј РѕР± РѕС€РёР±РєРµ
 		if (number>=0)
-			System.out.println("Факториал этого числа="+factorial);
+			System.out.println("Р¤Р°РєС‚РѕСЂРёР°Р» СЌС‚РѕРіРѕ С‡РёСЃР»Р°="+factorial);
 		else
-			System.out.println("Вы ввели неверное число.");	
+			System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРІРµСЂРЅРѕРµ С‡РёСЃР»Рѕ.");	
 
 	}
 

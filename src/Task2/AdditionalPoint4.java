@@ -3,9 +3,9 @@ package Task2;
 public class AdditionalPoint4 {
 
 	public static void main(String[] args) {
-//для всех положительных целых чисел от 0 до 10 выводим таблицу квадратов:)
+		//РґР»СЏ РІСЃРµС… РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… С†РµР»С‹С… С‡РёСЃРµР» РѕС‚ 0 РґРѕ 10 РІС‹РІРѕРґРёРј С‚Р°Р±Р»РёС†Сѓ РєРІР°РґСЂР°С‚РѕРІ:)
 		for (int i=1;i<11;i++){
-		System.out.println(i+" "+i*i);
-	}		
+			System.out.println(i+" "+i*i);
+		}		
 	}
 }
