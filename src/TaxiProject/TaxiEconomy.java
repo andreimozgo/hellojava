@@ -1,5 +1,8 @@
 package TaxiProject;
-
+/**TaxiEconomy class used for inexpensive and economy cars.
+ * It extends from Taxi and inplements EconomyCar interfase
+ * @author Андрей
+ */
 public class TaxiEconomy extends Taxi implements EconomyCar{
 
 	public TaxiEconomy(String carName, int price, int consumption, int speed){

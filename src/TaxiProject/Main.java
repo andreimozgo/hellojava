@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
+/**It's a main class of my project!
+ * @author Андрей
+ */
 
 class MyComparator implements Comparator<Taxi> {
 
@@ -16,8 +19,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		int totalPrice = 0;
-		int minSpeed;
-		int maxSpeed;
+		int minSpeed = -1;
+		int maxSpeed = -1;
 		Scanner textInput = new Scanner(System.in);
 		TaxiEconomy dacia = new TaxiEconomy("Dacia",10000,8,100);
 		TaxiEconomy daewoo = new TaxiEconomy("Daewoo",8000,7,110);
@@ -48,9 +51,19 @@ public class Main {
 			System.out.println(car);
 		}
 		System.out.println("Введите минимальную скорость: ");
-		minSpeed = textInput.nextInt();
+		try {
+			minSpeed = textInput.nextInt();
+		}
+		catch (java.util.InputMismatchException e) {
+			System.out.println("Вы ввели недопустимые символы.");
+		}
 		System.out.println("Введите максимальную скорость: ");
-		maxSpeed = textInput.nextInt();
+		try {
+			maxSpeed = textInput.nextInt();
+		}
+		catch (java.util.InputMismatchException e) {
+			System.out.println("Вы ввели недопустимые символы.");
+		}
 		textInput.close();
 		for(Taxi car : cars){
 			if(car.speed>=minSpeed&&car.speed<=maxSpeed){

@@ -1,5 +1,11 @@
 package TaxiProject;
 
+import java.util.Objects;
+
+/**Abstract class Taxi used with TaxiRegular, TaxiEconomy and 
+ * TaxiVip classes
+ * @author Андрей
+ */
 abstract public class Taxi {
 
 	protected String carName;
@@ -7,7 +13,6 @@ abstract public class Taxi {
 	protected int speed;
 	protected int seats = 5;
 	protected int consumption;
-	int id;
 
 	public void accelerate(){
 		speed += 10;
@@ -20,18 +25,21 @@ abstract public class Taxi {
 	public String toString(){
 		return carName + " " + price + " "+ consumption + " " + speed;
 	}
-	
-    public boolean equals(Taxi other)
-    {
-        if(!super.equals(other)) return false;
-        if (this == other) return true;
-        if (other == null) return false;
-        if(this.getClass() != other.getClass()) return false;
-        Taxi otherObj = (Taxi)other;
-        return this.id == otherObj.id;
-    }
-    public int hashCode()
-    {   
-        return 76+133*id;
-    }
+
+	public boolean equals(Taxi other){
+		if (other == null||this == null) return false;
+		if (this == other) return true;
+		if(this.getClass() != other.getClass()) return false;
+		if (this.carName!=other.carName) return false;
+		if (this.price!=other.price) return false;
+		if (this.speed!=other.speed) return false;
+		if (this.seats!=other.seats) return false;
+		if (this.consumption!=other.consumption) return false;
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(carName, price, speed, seats, consumption);
+	}
 }
