@@ -13,7 +13,7 @@ public class Hello {
 		File f = new File(path);
 		f.createNewFile();
 
-		try {
+/*		try {
 			
 			fileInputStream = new FileInputStream(path);
 			} catch (FileNotFoundException e) {
@@ -26,7 +26,7 @@ public class Hello {
 
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
 		a = (A) ois.readObject();
-		System.out.println("After: " + a);
+		System.out.println("After: " + a);*/
 	}
 }
 
