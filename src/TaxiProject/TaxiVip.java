@@ -1,7 +1,7 @@
 package TaxiProject;
 /**TaxiVip class used for expensive and sport cars.
  * It extends from Taxi and inplements sportCar interfase.
- * @author Андрей
+ * @author Mozgo Andrei
  */
 public class TaxiVip extends Taxi implements SportCar{
 

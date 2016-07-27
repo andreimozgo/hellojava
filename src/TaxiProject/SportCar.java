@@ -1,7 +1,7 @@
 package TaxiProject;
 /**This interface used with TaxiVip objects and provide 
  * superior Acceleration!
- * @author Андрей
+ * @author Mozgo Andrei
  */
 public interface SportCar{
 	public void sportAccelerate();

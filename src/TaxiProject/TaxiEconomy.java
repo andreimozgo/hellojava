@@ -1,7 +1,7 @@
 package TaxiProject;
 /**TaxiEconomy class used for inexpensive and economy cars.
  * It extends from Taxi and inplements EconomyCar interfase
- * @author Андрей
+ * @author Mozgo Andrei
  */
 public class TaxiEconomy extends Taxi implements EconomyCar{
 

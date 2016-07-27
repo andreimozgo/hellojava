@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 /**It's a main class of my project!
- * @author Андрей
+ * @author Mozgo Andrei
  */
 
 class MyComparator implements Comparator<Taxi> {

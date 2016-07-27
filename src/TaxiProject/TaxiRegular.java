@@ -2,7 +2,7 @@ package TaxiProject;
 /**TaxiRegular class used for regular cars.
  * It extends from Taxi and inplements EconomyCar interfase
  * and ChangeSeatsNumber interface for minivans.
- * @author Андрей
+ * @author Mozgo Andrei
  */
 public class TaxiRegular extends Taxi implements ChangeSeatsNumber, EconomyCar{
 	public TaxiRegular(String carName, int price, int consumption, int speed){

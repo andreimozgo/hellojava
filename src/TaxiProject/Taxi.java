@@ -1,10 +1,8 @@
 package TaxiProject;
-
 import java.util.Objects;
-
 /**Abstract class Taxi used with TaxiRegular, TaxiEconomy and 
  * TaxiVip classes
- * @author Андрей
+ * @author Mozgo Andrei
  */
 abstract public class Taxi {
 
