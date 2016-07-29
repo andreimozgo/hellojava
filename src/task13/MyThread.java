@@ -22,6 +22,8 @@ public class MyThread extends Thread {
 		MyThread myThreadSecond = new MyThread();
 		Scanner input = new Scanner(System.in);
 
+		myThreadFirst.setName("Thread 1");
+		myThreadSecond.setName("Thread 2");		
 		System.out.println("Введите start для запуска: ");
 		while(true){
 			try{
