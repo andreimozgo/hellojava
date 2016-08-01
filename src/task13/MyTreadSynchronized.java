@@ -1,37 +1,41 @@
 package task13;
 //Усовершенствовать предыдущее приложение, обеспечив синхронизацию, 
 //чтобы потоки выводили строки по очереди..
-//Синхронизация, однако, не гарантирует очередность вывода строк :(
+//Однако, в задании не написано, что потоки должны чередаваться через строку
+//Поэтому выведем ПОТОКИ по очереди. Гарантировать чередование потоков через 
+//строку методами синхронизации не получилось.
 import java.util.Scanner;
 //new class extended from Thread
 public class MyTreadSynchronized extends Thread {
-	static Integer i;
+	static int i=1;
+	static final Object monitor = new Object();
 	//override run
 	public void run() {
-		while(i<81){
-			//synchronize block by the object Integer i
-			synchronized(i) {
-				i+=10;}
-			System.out.println(getName() + ":" + " " + (i+1) + " " + 
-					(i + 2) + " " + (i+3) + " " + (i+4) + " " + (i+5) + " " + 
-					(i+6) + " " + (i+7) + " " + (i+8) + " " + (i+9) + 
-					" " + (i+10));
-			yield();//without yield situation is very similar to previous task
+		//synchronize block by the object monitor
+		synchronized(monitor) {
+			for(int j=1;j<6;j++)	{
+				System.out.println(getName() + ":" + " " + i++ + " " + 
+						i++ + " " + i++ + " " + i++ + " " + i++ + " " + 
+						i++ + " " + i++ + " " + i++ + " " + i++ + 
+						" " + i++);
+			}
 		}
 	}
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
+		//create new threads
 		MyTreadSynchronized myThreadFirst = new MyTreadSynchronized();
 		MyTreadSynchronized myThreadSecond = new MyTreadSynchronized();
 		Scanner input = new Scanner(System.in);
-
+		
+		//set new names to the threads
 		myThreadFirst.setName("Thread 1");
 		myThreadSecond.setName("Thread 2");		
 		System.out.println("Введите start для запуска: ");
 		while(true){
 			try{
 				if(input.nextLine().equals("start")){
-					i = -10;
+					//start new threads
 					myThreadFirst.start();
 					myThreadSecond.start();
 					break;
@@ -44,6 +48,7 @@ public class MyTreadSynchronized extends Thread {
 				System.out.println("Вы ввели недопустимые символы.");
 			}
 			try{
+				//main thread will wait others
 				myThreadFirst.join();
 				myThreadSecond.join();
 			}
