@@ -5,10 +5,13 @@ package task13;
 //Поэтому выведем ПОТОКИ по очереди. Гарантировать чередование потоков через 
 //строку методами синхронизации не получилось.
 import java.util.Scanner;
+
 //new class extended from Thread
 public class MyTreadSynchronized extends Thread {
+
 	static int i=1;
 	static final Object monitor = new Object();
+
 	//override run
 	public void run() {
 		//synchronize block by the object monitor
@@ -27,7 +30,7 @@ public class MyTreadSynchronized extends Thread {
 		MyTreadSynchronized myThreadFirst = new MyTreadSynchronized();
 		MyTreadSynchronized myThreadSecond = new MyTreadSynchronized();
 		Scanner input = new Scanner(System.in);
-		
+
 		//set new names to the threads
 		myThreadFirst.setName("Thread 1");
 		myThreadSecond.setName("Thread 2");		

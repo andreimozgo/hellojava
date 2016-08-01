@@ -2,9 +2,12 @@ package task13;
 //Написать приложение, в котором используются 2 потока
 //На моем компе чаще всего 1й поток берет на себя все, но иногда вмешивается и второй 
 import java.util.Scanner;
+
 //new class extended from Thread
 public class MyThread extends Thread {
+
 	static int i; //static to use its value with all threads
+
 	//override run
 	public void run() {
 		while(i<81){
