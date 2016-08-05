@@ -21,9 +21,6 @@ public class I18nPoint2 {
 		Scanner scanner = new Scanner(System.in);
 		String language;
 		Collator collator = Collator.getInstance(loc);
-		ResourceBundle rb = ResourceBundle.getBundle("resources/Text", loc);
-		DateFormat dfEn = DateFormat.getDateInstance(DateFormat.FULL,
-				Locale.getDefault());
 
 		System.out.println("Choose language (en,ru,be): ");
 		language = scanner.nextLine();
@@ -37,6 +34,8 @@ public class I18nPoint2 {
 			loc = new Locale("en", "EN");
 		}
 		scanner.close();
+		ResourceBundle rb = ResourceBundle.getBundle("resources/Text", loc);
+		DateFormat dfEn = DateFormat.getDateInstance(DateFormat.FULL,loc);
 		System.out.println(rb.getString("hello"));
 		System.out.println(dfEn.format(currentDate));
 	}
