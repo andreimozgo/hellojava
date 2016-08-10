@@ -41,7 +41,7 @@ public class MyThread extends Thread {
 				}
 			}
 			catch (java.util.InputMismatchException e) {
-				System.out.println("Вы ввели недопустимые символы.");
+				System.out.println("Вы ввели недопустимые символы. ");
 			}
 			try{
 				//main thread will wait others
