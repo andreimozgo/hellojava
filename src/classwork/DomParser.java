@@ -35,7 +35,7 @@ public class DomParser {
 		Element root = doc.getDocumentElement();
 		System.out.print(root.getTagName());
 		
-		NodeList nList = root..getChildNodes();
+		NodeList nList = root.getChildNodes();
 		//System.out.println(nList.getLength());
 		int number=1;
 		for (int i = 0; i < nList.getLength(); i++) {
