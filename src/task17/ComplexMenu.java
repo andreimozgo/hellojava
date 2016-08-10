@@ -3,8 +3,17 @@ package task17;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Паттерн Builder. Разработать модель системы Комплексный обед. Написать код
+ * приложения, позволяющий создавать как стандартные комплексные обеды, так и
+ * обеды, в которые включены дополнительные блюда из меню. Минимум 3 типа
+ * дополнительных блюд.
+ * 
+ * @author Андрей
+ * 
+ */
+//Собственно сам обед, состоящий из некоторых блюд
 class Dinner {
-
 	private ArrayList<String> dinner = new ArrayList<>();
 
 	public void add(String dish) {
@@ -12,11 +21,10 @@ class Dinner {
 	}
 
 	public String toString() {
-
 		return "Ваш обед: " + dinner.toString();
 	}
 }
-
+//Абстрактный билдер
 abstract class DinnerBuilder {
 	protected Dinner dinner;
 
@@ -30,7 +38,7 @@ abstract class DinnerBuilder {
 
 	public abstract void buildDinner();
 }
-
+//Билдер для первого стандартного типа комплексного обеда
 class StandartDinnerFirst extends DinnerBuilder {
 	public void buildDinner() {
 		dinner.add("Борщ");
@@ -38,7 +46,7 @@ class StandartDinnerFirst extends DinnerBuilder {
 		dinner.add("Компот");
 	}
 }
-
+//Билдер для второго стандартного типа комплексного обеда
 class StandartDinnerSecond extends DinnerBuilder {
 	public void buildDinner() {
 		dinner.add("Солянка");
@@ -46,7 +54,7 @@ class StandartDinnerSecond extends DinnerBuilder {
 		dinner.add("Чай");
 	}
 }
-
+//Класс директор создающий билдеры обедов и сами обеды
 class Director {
 	private DinnerBuilder dinnerBuilder;
 
@@ -63,15 +71,17 @@ class Director {
 		dinnerBuilder.buildDinner();
 	}
 }
-
+//Главный класс, где все происходит
 public class ComplexMenu {
 	public static void main(String[] args) {
 		Director director = new Director();
 		Scanner scanner = new Scanner(System.in);
+		
 		System.out.println("Выберите комплексный обед:");
 		System.out.println("1 - Борщ, макароны с сосиской, компот");
 		System.out.println("2 - Солянка, пюре с жаренной колбасой, чай");
-		switch(scanner.nextInt()){
+		//выбираем комплексный обед из стандартных
+		switch (scanner.nextInt()) {
 		case 1:
 			DinnerBuilder standartDinnerFirst = new StandartDinnerFirst();
 			director.setDinnerBuilder(standartDinnerFirst);
@@ -81,11 +91,14 @@ public class ComplexMenu {
 			director.setDinnerBuilder(standartDinnerSecond);
 			break;
 		}
+		//Создаем объект Dinner с нужными свойствами
 		director.constructDinner();
 		Dinner dinner = director.getDinner();
+		//При желании добавляем одно из трех блюд
 		System.out.println("Вы можете добавить дополнительное блюдо:");
-		System.out.println("1 - Греческий салат\n2 - Круассан\n3 - Пицца\n0 - Дополнительное блюдо не требуется");
-		switch(scanner.nextInt()){
+		System.out
+				.println("1 - Греческий салат\n2 - Круассан\n3 - Пицца\n0 - Дополнительное блюдо не требуется");
+		switch (scanner.nextInt()) {
 		case 1:
 			dinner.add("Греческий салат");
 			break;
