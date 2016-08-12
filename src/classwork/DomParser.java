@@ -13,6 +13,13 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+class Point {
+	String number;
+	String x;
+	String y;
+	String unit;
+}
+
 public class DomParser {
 
 	public static void main(String[] args) {
@@ -34,33 +41,33 @@ public class DomParser {
 		}
 		Element root = doc.getDocumentElement();
 		System.out.print(root.getTagName());
-		
+
 		NodeList nList = root.getChildNodes();
-		//System.out.println(nList.getLength());
-		int number=1;
+		Point point = new Point();
 		for (int i = 0; i < nList.getLength(); i++) {
-			//System.out.println(nList.item(i).getNodeName());
-			//System.out.println(nList.item(i).getNodeValue());
-			
 			if (nList.item(i) instanceof Element) {
-				System.out.print("\n" + nList.item(i).getNodeName() + " " + number++ + ":");
-				
 				NodeList nList2 = nList.item(i).getChildNodes();
-				//System.out.print(nList.item(i).getElementsByTagName("x");
-				System.out.print(nList2.item(1).getTextContent() + nList2.item(5).getTextContent() +
-						"," + nList2.item(3).getTextContent() + nList2.item(5).getTextContent());
-			/*	for (int j = 0; j < nList2.getLength(); j++) {
-					if (nList2.item(j). instanceof Element) {
-						System.out.print(nList2.item(j).getTextContent());
-					}*/
-				//}
-//				NamedNodeMap attributes = ((Element)nList.item(i)).getAttributes( );
-//				for (int k = 0; k < attributes.getLength(); k++) {
-//					System.out.print(attributes.item(k).getNodeName());
-//					System.out.print(attributes.item(k).getNodeValue());
-//				}
+				NamedNodeMap attributes = nList.item(i).getAttributes();
+				point.number = attributes.getNamedItem("m").getNodeValue();
+				System.out.print("\n" + nList.item(i).getNodeName() + " "
+						+ attributes.getNamedItem("m").getNodeValue() + ":");
+				for (int j = 0; j < nList2.getLength(); j++) {
+					if (nList2.item(j) instanceof Element) {
+						switch (nList2.item(j).getNodeName()) {
+						case "x":
+							point.x = nList2.item(j).getTextContent();
+							break;
+						case "y":
+							point.y = nList2.item(j).getTextContent();
+							break;
+						case "unit":
+							point.unit = nList2.item(j).getTextContent();
+						}
+					}
+				}
+				System.out.print(point.x + point.unit + "," + point.y
+						+ point.unit);
 			}
 		}
 	}
 }
-
