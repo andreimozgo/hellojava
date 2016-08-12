@@ -14,7 +14,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 class Point {
-	String number;
 	String x;
 	String y;
 	String unit;
@@ -48,7 +47,6 @@ public class DomParser {
 			if (nList.item(i) instanceof Element) {
 				NodeList nList2 = nList.item(i).getChildNodes();
 				NamedNodeMap attributes = nList.item(i).getAttributes();
-				point.number = attributes.getNamedItem("m").getNodeValue();
 				System.out.print("\n" + nList.item(i).getNodeName() + " "
 						+ attributes.getNamedItem("m").getNodeValue() + ":");
 				for (int j = 0; j < nList2.getLength(); j++) {
