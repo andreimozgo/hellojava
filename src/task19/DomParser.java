@@ -1,4 +1,4 @@
-package classwork;
+package task19;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,19 +13,17 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-class Point {
-	String x;
-	String y;
-	String unit;
-}
-
 public class DomParser {
 
 	public static void main(String[] args) {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = null;
 		Document doc = null;
+		String x = new String();
+		String y = new String();
+		String unit = new String();
 		int number=0;
+		
 		try {
 			builder = factory.newDocumentBuilder();
 		} catch (ParserConfigurationException e) {
@@ -41,9 +39,7 @@ public class DomParser {
 		}
 		Element root = doc.getDocumentElement();
 		System.out.print(root.getTagName());
-
 		NodeList nList = root.getChildNodes();
-		Point point = new Point();
 		for (int i = 0; i < nList.getLength(); i++) {
 			if (nList.item(i) instanceof Element) {
 				NodeList nList2 = nList.item(i).getChildNodes();
@@ -53,18 +49,17 @@ public class DomParser {
 					if (nList2.item(j) instanceof Element) {
 						switch (nList2.item(j).getNodeName()) {
 						case "x":
-							point.x = nList2.item(j).getTextContent();
+							x = nList2.item(j).getTextContent();
 							break;
 						case "y":
-							point.y = nList2.item(j).getTextContent();
+							y = nList2.item(j).getTextContent();
 							break;
 						case "unit":
-							point.unit = nList2.item(j).getTextContent();
+							unit = nList2.item(j).getTextContent();
 						}
 					}
 				}
-				System.out.print(point.x + point.unit + "," + point.y
-						+ point.unit);
+				System.out.print(x + unit + "," + y	+ unit);
 			}
 		}
 	}

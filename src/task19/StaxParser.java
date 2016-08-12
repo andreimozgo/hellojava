@@ -16,6 +16,7 @@ public class StaxParser {
 		String pointX = new String();
 		String pointY = new String();
 		XMLInputFactory factory = XMLInputFactory.newFactory();
+		int number = 0;
 
 		try {
 			XMLStreamReader reader = factory
@@ -27,7 +28,7 @@ public class StaxParser {
 						System.out.println(reader.getLocalName());
 					else if (reader.getLocalName().equals("point"))
 						System.out.print(reader.getLocalName() + " "
-								+ reader.getAttributeValue(0) + ":");
+								+ ++number + ":");
 					else if (reader.getLocalName().equals("x"))
 						isX = true;
 					else if (reader.getLocalName().equals("y"))
