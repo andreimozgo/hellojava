@@ -9,7 +9,7 @@ package task19;
 	import javax.xml.stream.XMLStreamException;
 	import javax.xml.stream.XMLStreamReader;
 
-	public class SaxParser {
+	public class StaxParser {
 		public static void main(String args[]) {
 			boolean isX = false;
 			boolean isY = false;
