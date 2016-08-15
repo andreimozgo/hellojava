@@ -44,7 +44,6 @@ import org.xml.sax.SAXException;
 			NodeList nList = root.getChildNodes();
 			for (int i = 0; i < nList.getLength(); i++) {
 				if (nList.item(i) instanceof Element) {
-					if(nList.item(i).)
 					NodeList nList2 = nList.item(i).getChildNodes();
 
 					for (int j = 0; j < nList2.getLength(); j++) {
