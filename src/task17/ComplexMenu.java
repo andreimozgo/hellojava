@@ -12,65 +12,6 @@ import java.util.Scanner;
  * @author Андрей
  * 
  */
-//Собственно сам обед, состоящий из некоторых блюд
-class Dinner {
-	private ArrayList<String> dinner = new ArrayList<>();
-
-	public void add(String dish) {
-		dinner.add(dish);
-	}
-
-	public String toString() {
-		return "Ваш обед: " + dinner.toString();
-	}
-}
-//Абстрактный билдер
-abstract class DinnerBuilder {
-	protected Dinner dinner;
-
-	public Dinner getDinner() {
-		return dinner;
-	}
-
-	public void createNewDinner() {
-		dinner = new Dinner();
-	}
-
-	public abstract void buildDinner();
-}
-//Билдер для первого стандартного типа комплексного обеда
-class StandartDinnerFirst extends DinnerBuilder {
-	public void buildDinner() {
-		dinner.add("Борщ");
-		dinner.add("Макароны с сосиской");
-		dinner.add("Компот");
-	}
-}
-//Билдер для второго стандартного типа комплексного обеда
-class StandartDinnerSecond extends DinnerBuilder {
-	public void buildDinner() {
-		dinner.add("Солянка");
-		dinner.add("Пюре с жаренной колбасой");
-		dinner.add("Чай");
-	}
-}
-//Класс директор создающий билдеры обедов и сами обеды
-class Director {
-	private DinnerBuilder dinnerBuilder;
-
-	public void setDinnerBuilder(DinnerBuilder db) {
-		dinnerBuilder = db;
-	}
-
-	public Dinner getDinner() {
-		return dinnerBuilder.getDinner();
-	}
-
-	public void constructDinner() {
-		dinnerBuilder.createNewDinner();
-		dinnerBuilder.buildDinner();
-	}
-}
 //Главный класс, где все происходит
 public class ComplexMenu {
 	public static void main(String[] args) {
